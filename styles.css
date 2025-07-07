@@ -100,6 +100,7 @@ body {
 
 .profile {
   background-color: var(--navy-900);
+  border-radius: 0.9375rem;
   overflow: clip;
 }
 
@@ -109,7 +110,6 @@ body {
   gap: var(--spacing-300);
   background-color: var(--purple-600);
   color: var(--white);
-  margin-block-end: var(--spacing-300);
   padding-block: var(--spacing-400);
   padding-inline: var(--spacing-400);
   border-radius: 0.9375rem;
@@ -119,10 +119,31 @@ body {
   width: 4rem;
   border-radius: 50%;
   border: 3px solid var(--white);
+  box-sizing: content-box;
 }
 
 .profile-name span {
   display: block;
   color: var(--navy-200);
   margin-block-end: var(--spacing-100);
+}
+
+.profile-buttons {
+  display: flex;
+  /* gap: 1rem; */
+  padding-block: var(--spacing-300);
+  justify-content: space-around;
+}
+
+.btn {
+  padding-inline: 1rem;
+  background-color: inherit;
+  color: var(--purple-500);
+  border: 0;
+  cursor: pointer;
+}
+
+/* Toggle class for JS */
+.active {
+  color: var(--white);
 }
