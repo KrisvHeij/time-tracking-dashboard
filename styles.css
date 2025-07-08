@@ -46,6 +46,7 @@
   font-size: 2rem;
   font-weight: var(--fw-light);
   line-height: 38px;
+  color: var(--white);
 }
 
 .text-4-light {
@@ -58,6 +59,7 @@
   font-size: 1.125rem;
   font-weight: var(--fw-medium);
   line-height: 21px;
+  color: var(--white);
 }
 
 .text-5-regular {
@@ -70,6 +72,7 @@
   font-size: 0.9375rem;
   font-weight: var(--fw-regular);
   line-height: 18px;
+  color: var(--navy-200);
 }
 
 /* Reset & general styles */
@@ -94,9 +97,11 @@ body {
 }
 
 /* Profile styles */
-/* .wrapper {
-  border: 1px solid red;
-} */
+.wrapper {
+  /* border: 1px solid red; */
+  display: grid;
+  gap: var(--spacing-300);
+}
 
 .profile {
   background-color: var(--navy-900);
@@ -142,6 +147,61 @@ body {
   border: 0;
   cursor: pointer;
 }
+
+/* Card styles */
+.card-container {
+  /* border: 1px solid yellow; */
+  display: grid;
+  gap: var(--spacing-300);
+}
+
+.card {
+  border: 1px solid pink;
+  border-radius: 0.9375rem;
+  overflow: hidden;
+}
+
+.card-img {
+  height: 2.375rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img img {
+  position: absolute;
+  right: 1rem;
+  top: -0.75rem;
+}
+
+.card-content {
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+  background-color: var(--navy-900);
+  border-top-left-radius: 0.9375rem;
+  border-top-right-radius: 0.9375rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: var(--spacing-100);
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.card-1 {
+  background-color: var(--orange-300);
+}
+
+
+
+
 
 /* Toggle class for JS */
 .active {
