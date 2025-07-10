@@ -11,7 +11,7 @@
   --purple-700: hsl(264 64% 52%);
   --purple-600: hsl(246 80% 60%);
   --purple-500: hsl(235 45% 61%);
-  --blue-300: hsl(195 745 62%);
+  --blue-300: hsl(195 74% 62%);
   --pink-400: hsl(348 100% 68%);
   --green-400: hsl(145 58% 55%);
   --yellow-300: hsl(43 84% 65%);
@@ -64,7 +64,7 @@
 
 .text-5-regular {
   font-size: 1.125rem;
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-medium);
   line-height: 21px; 
 }
 
@@ -156,7 +156,6 @@ body {
 }
 
 .card {
-  border: 1px solid pink;
   border-radius: 0.9375rem;
   overflow: hidden;
 }
@@ -194,13 +193,42 @@ body {
   align-items: center;
 }
 
-
 .card-1 {
   background-color: var(--orange-300);
 }
 
+.card-2 {
+  background-color: var(--blue-300);
+}
 
+.card-3 {
+  background-color: var(--pink-400);
+}
 
+.card-4 {
+  background-color: var(--green-400);
+}
+
+.card-5 {
+  background-color: var(--purple-700);
+}
+
+.card-6 {
+  background-color: var(--yellow-300);
+}
+
+/* Media Queries */
+/* Media query > 31.25rem (500px)*/
+@media (min-width: 31.25rem) {
+  .wrapper {
+    max-width: 38.25rem;
+  }
+
+  .profile-buttons {
+    max-width: 21.4375rem;
+    margin-inline: auto;
+  }
+}
 
 
 /* Toggle class for JS */
