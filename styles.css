@@ -172,6 +172,7 @@ body {
 }
 
 .card-content {
+  height: 100%;
   padding-block: var(--spacing-300);
   padding-inline: var(--spacing-300);
   background-color: var(--navy-900);
@@ -256,7 +257,30 @@ body {
 
 /* Media query > 62rem (992px) */
 @media (min-width: 62rem) {
-  
+  .wrapper {
+    max-width: 69.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-400);
+  }
+
+  .profile-info,
+  .profile-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-info {
+    height: 22.125rem;
+  }
+
+  .profile-buttons {
+    height: 10.375rem;
+  }
+
+  .card-container {
+    grid-column: 2 / 5;
+    gap: var(--spacing-400);
+  }
 }
 
 /* Toggle class for JS */
