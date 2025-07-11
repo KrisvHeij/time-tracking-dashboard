@@ -13,10 +13,8 @@ const getData = async () => {
 }
 
 function updateUI(data) {
-  console.log(data);
   
   data.forEach((item, index) => {
-    console.log(item);
     
     cardContainer.innerHTML += `
       <div class="card card-${index + 1}">
@@ -26,7 +24,9 @@ function updateUI(data) {
           <div class="card-content">
             <div class="card-header">
               <h2 class="text-5-medium">${item.title}</h2>
-              <img src="./images/icon-ellipsis.svg" alt="" />
+              <button class="card-btn" type="button">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </button>
             </div>
             <div class="card-text">
               <p class="text-3-light">${item.timeframes.daily.current}hrs</p>

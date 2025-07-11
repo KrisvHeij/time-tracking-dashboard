@@ -187,6 +187,12 @@ body {
   margin-block-end: var(--spacing-100);
 }
 
+.card-btn {
+  background-color: inherit;
+  cursor: pointer;
+  border: 0;
+}
+
 .card-text {
   display: flex;
   justify-content: space-between;
