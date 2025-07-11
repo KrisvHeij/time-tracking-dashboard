@@ -50,9 +50,9 @@
 }
 
 .text-4-light {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5932vw + .8922rem, 2.5rem);
   font-weight: var(--fw-light);
-  line-height: 28px;
+  line-height: clamp(1.75rem, 3.0794vw + 1.0283rem, 2.9375rem);
 }
 
 .text-5-medium {
@@ -121,7 +121,7 @@ body {
 }
 
 .profile-image {
-  width: 4rem;
+  width: clamp(4rem, 2.269vw + 3.4682rem, 4.875rem);
   border-radius: 50%;
   border: 3px solid var(--white);
   box-sizing: content-box;
@@ -271,10 +271,16 @@ body {
 
   .profile-info {
     height: 22.125rem;
+    gap: var(--spacing-500);
   }
 
   .profile-buttons {
     height: 10.375rem;
+    margin-inline-start: var(--spacing-400);
+  }
+
+  .btn {
+    padding-inline: var(--spacing-0);
   }
 
   .card-container {
