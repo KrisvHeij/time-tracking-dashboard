@@ -218,8 +218,8 @@ body {
 }
 
 /* Media Queries */
-/* Media query > 37.5rem (600px)*/
-@media (min-width: 37.5rem) {
+/* Media query > (500px)*/
+@media (min-width: 31.25rem) {
   .wrapper {
     max-width: 38.25rem;
     margin-inline: auto;
@@ -231,7 +231,7 @@ body {
   }
 
   .card-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card-img img {
@@ -255,7 +255,14 @@ body {
   }
 }
 
-/* Media query > 62rem (992px) */
+/* Media query > 768px */
+@media (min-width: 48rem) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media query > (992px) */
 @media (min-width: 62rem) {
   .wrapper {
     max-width: 69.75rem;
