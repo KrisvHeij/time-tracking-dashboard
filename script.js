@@ -7,13 +7,17 @@ const getData = async () => {
     const res = await fetch("./data.json");
     const data = await res.json();
     updateUI(data);
+    return data;
   } catch (err) {
     console.error(err);
   }
 }
 
+// Fill cards with data
+getData();
+
 function updateUI(data) {
-  
+ 
   data.forEach((item, index) => {
     
     cardContainer.innerHTML += `
@@ -40,4 +44,14 @@ function updateUI(data) {
   })
 }
 
-getData();
+function filterCards(id) {
+  const filters = [
+    {daily: "Yesterday"},
+    {weekly: "Last Week"},
+    {monthly: "Last Month"}
+  ];
+}
+
+allButtons.addEventListener("click", (e) => {
+  filterCards(e.target.id);
+})
