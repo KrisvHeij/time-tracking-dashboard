@@ -198,23 +198,9 @@ body {
 }
 
 .card-btn {
-  display: flex;
-  gap: 2px;
   background-color: inherit;
   border: 0;
   cursor: pointer;
-}
-
-.card-btn .dot {
-  width: 5px;
-  height: 5px;
-  background-color: var(--grey-200);
-  border-radius: 50%;
-  transition: background-color 250ms ease;
-}
-
-.card-btn:hover .dot {
-  background-color: var(--white);
 }
 
 .card-text {

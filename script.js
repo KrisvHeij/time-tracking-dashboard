@@ -45,9 +45,7 @@ function updateUI(timeframe) {
           <div class="card-header">
             <h2 class="text-5-medium">${item.title}</h2>
             <button class="card-btn" type="button">
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
+              <img src="./images/icon-ellipsis.svg" alt="">
             </button>
           </div>
           <div class="card-text">
