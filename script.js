@@ -1,24 +1,24 @@
-const allButtons = document.getElementById("all-buttons");
+const allButtons = document.querySelectorAll(".btn");
 const cardContainer = document.querySelector(".card-container");
 const svgImages = ["work", "play", "study", "exercise", "social", "self-care"];
+let allData = [];
 
 const getData = async () => {
   try {
     const res = await fetch("./data.json");
     const data = await res.json();
-    updateUI(data);
-    return data;
+    allData = data;
+    updateUI("daily");
   } catch (err) {
     console.error(err);
   }
 }
 
-// Fill cards with data
-getData();
-
-function updateUI(data) {
+function updateUI(timeframe) {
+  cardContainer.innerHTML = "";
  
-  data.forEach((item, index) => {
+  allData.forEach((item, index) => {
+    const tf = item.timeframes[timeframe]
     
     cardContainer.innerHTML += `
       <div class="card card-${index + 1}">
@@ -33,9 +33,9 @@ function updateUI(data) {
               </button>
             </div>
             <div class="card-text">
-              <p class="text-3-light">${item.timeframes.daily.current}hrs</p>
+              <p class="text-3-light">${tf.current}hrs</p>
               <p class="text-6-regular">
-                <span>Yesterday</span> - <span>${item.timeframes.daily.previous}hrs</span>
+                <span>Yesterday</span> - <span>${tf.previous}hrs</span>
               </p>
             </div>
           </div>
@@ -44,14 +44,21 @@ function updateUI(data) {
   })
 }
 
-function filterCards(id) {
-  const filters = [
-    {daily: "Yesterday"},
-    {weekly: "Last Week"},
-    {monthly: "Last Month"}
-  ];
-}
+allButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    allButtons.forEach(btn => btn.classList.remove("active"));
 
-allButtons.addEventListener("click", (e) => {
-  filterCards(e.target.id);
+    button.classList.add("active");
+
+    updateUI(button.id);
+  })
 })
+
+// allButtons.addEventListener("click", (e) => {
+//   updateUI(e.target.id);
+  
+// })
+
+// Fill cards with data
+getData();
+
