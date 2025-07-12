@@ -298,6 +298,11 @@ body {
 
 /* Media query > (992px) */
 @media (min-width: 62rem) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
   .wrapper {
     max-width: 69.75rem;
     grid-template-columns: repeat(4, 1fr);
