@@ -146,6 +146,11 @@ body {
   color: var(--purple-500);
   border: 0;
   cursor: pointer;
+  transition: color 250ms ease;
+}
+
+.btn:hover {
+  color: var(--white);
 }
 
 /* Card styles */
@@ -178,6 +183,11 @@ body {
   background-color: var(--navy-900);
   border-top-left-radius: 0.9375rem;
   border-top-right-radius: 0.9375rem;
+  transition: background-color 250ms ease;
+}
+
+.card-content:hover {
+  background-color: var(--navy-800);
 }
 
 .card-header {
@@ -188,9 +198,23 @@ body {
 }
 
 .card-btn {
+  display: flex;
+  gap: 2px;
   background-color: inherit;
-  cursor: pointer;
   border: 0;
+  cursor: pointer;
+}
+
+.card-btn .dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--grey-200);
+  border-radius: 50%;
+  transition: background-color 250ms ease;
+}
+
+.card-btn:hover .dot {
+  background-color: var(--white);
 }
 
 .card-text {
