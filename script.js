@@ -62,7 +62,7 @@ function updateUI(timeframe) {
 
 // Filter UI
 buttons.forEach((button) => {
-  const targetId = btn.id;
+  const targetId = button.id;
   button.addEventListener("click", () => {
     buttons.forEach(btn => btn.classList.remove("active"));
 
