@@ -16,6 +16,17 @@ const getData = async () => {
 
 function updateUI(timeframe) {
   cardContainer.innerHTML = "";
+
+  let history;
+  if (timeframe === "daily") {
+    history = "Yesterday";
+  }
+  if (timeframe === "weekly") {
+    history = "Last Week";
+  }
+  if (timeframe === "monthly") {
+    history = "Last Month";
+  }
  
   allData.forEach((item, index) => {
     const tf = item.timeframes[timeframe]
@@ -35,7 +46,7 @@ function updateUI(timeframe) {
             <div class="card-text">
               <p class="text-3-light">${tf.current}hrs</p>
               <p class="text-6-regular">
-                <span>Yesterday</span> - <span>${tf.previous}hrs</span>
+                <span>${history}</span> - <span>${tf.previous}hrs</span>
               </p>
             </div>
           </div>
@@ -53,11 +64,6 @@ allButtons.forEach(button => {
     updateUI(button.id);
   })
 })
-
-// allButtons.addEventListener("click", (e) => {
-//   updateUI(e.target.id);
-  
-// })
 
 // Fill cards with data
 getData();
