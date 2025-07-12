@@ -44,7 +44,7 @@ function updateUI(timeframe) {
         <div class="card-content">
           <div class="card-header">
             <h2 class="text-5-medium">${item.title}</h2>
-            <button class="card-btn" type="button">
+            <button class="card-btn" type="button" aria-label="open/close card">
               <img src="./images/icon-ellipsis.svg" alt="">
             </button>
           </div>
@@ -68,7 +68,8 @@ buttons.forEach((button) => {
 
     button.classList.add("active");
     // UpdateUI with filter option
-    updateUI(btn.id);
+    const targetId = btn.id;
+    updateUI(targetId);
   })
 })
 
