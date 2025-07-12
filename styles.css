@@ -161,7 +161,7 @@ body {
 
 .card {
   border-radius: 0.9375rem;
-  overflow: hidden;     
+  overflow: hidden;
 }
 
 .card-img {
@@ -287,6 +287,10 @@ body {
 
 /* Media query > 768px */
 @media (min-width: 48rem) {
+  .wrapper {
+    max-width: 43rem;
+  }
+
   .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -323,6 +327,10 @@ body {
   .card-container {
     grid-column: 2 / 5;
     gap: var(--spacing-400);
+  }
+
+  .card-header {
+    margin-block-end: var(--spacing-300);
   }
 }
 
