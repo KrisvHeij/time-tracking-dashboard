@@ -61,12 +61,12 @@ function updateUI(timeframe) {
 }
 
 // Filter UI
-buttons.forEach((btn) => {
+buttons.forEach((button) => {
   
-  btn.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     buttons.forEach(btn => btn.classList.remove("active"));
 
-    btn.classList.add("active");
+    button.classList.add("active");
     // UpdateUI with filter option
     updateUI(btn.id);
   })
