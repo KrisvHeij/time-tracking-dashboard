@@ -68,7 +68,6 @@ buttons.forEach((button) => {
 
     button.classList.add("active");
     // UpdateUI with filter option
-    
     updateUI(targetId);
   })
 })
