@@ -49,9 +49,9 @@ function updateUI(timeframe) {
             </button>
           </div>
           <div class="card-text">
-            <p class="text-3-light">${tf.current}hrs</p>
+            <p class="text-3-light">${tf.current}${tf.current <= 1 ? "hr" : "hrs"}</p>
             <p class="text-6-regular">
-              <span>${history}</span> - <span>${tf.previous}hrs</span>
+              <span>${history}</span> - <span>${tf.previous}${tf.previous <= 1 ? "hr" : "hrs"}</span>
             </p>
           </div>
         </div>
